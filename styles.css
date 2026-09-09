@@ -11,7 +11,7 @@
   --color-navy: #07203F;
   --color-cream: #EBDED4;
   --color-tan: #D9AA90;
-  --color-rust: #A65E46;
+  --color-rust: #800000;
 }
 
 body {
@@ -56,8 +56,6 @@ p  { font-size: 1rem; }
 .button:hover {
   background-color: var(--color-rust);
 }
-
-/* Navigation row shared across all pages */
 .site-nav {
   display: flex;
   justify-content: center;
@@ -103,4 +101,23 @@ p  { font-size: 1rem; }
   .container {
     padding: 0 2rem;
   }
+}
+
+.resume-preview {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.resume-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #07203F;
+}
+
+.resume-preview a {
+    text-decoration: none;
+}
+.info-box li {
+    margin-bottom: 8px;
 }
