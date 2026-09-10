@@ -1,230 +1,196 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-
 <head>
-<title>TEST</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
+<title>Aparna Subramaniam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="styles.css">
 
+<style>
+.landing-layout {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 0;
+  align-items: stretch;
+}
+
+.landing-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.landing-right {
+  padding-left: 1rem;
+}
+
+.landing-intro {
+  background-color: #ffffff;
+  border-left: 6px solid var(--color-rust);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.landing-intro p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.previous-roles {
+  background-color: var(--color-tan);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.previous-roles h2 {
+  padding: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+.previous-roles ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.previous-roles li {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.landing-resume {
+  border: 2px solid var(--color-navy);
+  padding: 1rem;
+  text-align: center;
+}
+
+.landing-resume h2 {
+  padding: 0;
+  margin-bottom: 1rem;
+  color: var(--color-rust);
+  font-size: 1.3rem;
+}
+
+.landing-resume img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border: 2px solid var(--color-navy);
+  display: block;
+  margin: 0 auto;
+}
+
+.highlights {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.highlights h2 {
+  padding: 0;
+  color: var(--color-rust);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.highlights p {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 800px) {
+  .landing-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-photo {
+    min-height: 500px;
+  }
+
+  .landing-right {
+    padding-left: 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="center">
-        <h1>
-          <font color="#07203F">
-            Aparna Subramaniam
-          </font>
-        </h1>
-      </td>
-    </tr>
-  </table>
+  <h1>Aparna Subramaniam</h1>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <div class="landing-layout">
 
-    <tr>
+    <div>
+      <img src="profile.jpg" alt="Aparna Subramaniam" class="landing-photo">
+    </div>
 
-      <td width="45%" valign="top" align="center" style="padding-top: 10px;">
+    <div class="landing-right">
 
-        <div class="info-box"
-             style="background-color: #D9AA90; border-color: #800000;">
+      <div class="landing-intro">
+        <p>
+          Hi! I am Aparna Subramaniam. I am a junior at Texas A&M University
+          majoring in Computer Science, minoring in Cybersecurity. My ambition
+          is to work in the field of Computer Science & Information Technology,
+          and I am seeking valuable opportunities to discover more and develop
+          experience as an individual who is eager to enter the world of modern
+          technology.
+        </p>
+      </div>
 
-          <img src="profile.jpg"
-               alt="Aparna Subramaniam"
-               width="300">
+      <div class="previous-roles">
+        <h2>Previous Roles & Experience</h2>
+        <ul>
+          <li>AI & Software Intern @ True Rise Foundation</li>
+          <li>Student Worker - Applied Cybersecurity @ Texas A&M Engineering Extension Services (TEEX)</li>
+          <li>Student Technician @ Energy Systems Lab (TEES)</li>
+        </ul>
+      </div>
 
-        </div>
+      <div class="landing-resume">
+        <h2>My Resume</h2>
+        <a href="resume.png" target="_blank">
+          <img src="resume.png" alt="Aparna Subramaniam Resume">
+        </a>
+      </div>
 
-        <br><br>
+    </div>
 
-        <div class="info-box"
-             style="background-color: #EBDED4; border-color: #07203F;">
+  </div>
 
-          <font color="#07203F">
+  <div class="highlights">
+    <h2>Portfolio Highlights</h2>
 
-            <strong style="color: #800000;">
-              Portfolio Highlights
-            </strong>
+    <p>
+      <strong>AI & Software Development</strong> -
+      Develop AI-assisted applications using modern programming practices,
+      prompt engineering techniques, and secure coding principles.
+    </p>
 
-            <ul>
+    <p>
+      <strong>Computer Science & Technology</strong> -
+      Explore software development, computer systems, cybersecurity,
+      and emerging technologies through academic and personal projects.
+    </p>
 
-              <li>
-                <strong style="color: #07203F;">
-                  AI &amp; Software Development
-                </strong>
-                - Develop AI-assisted applications using prompt engineering,
-                modern programming practices, and secure coding techniques.
-              </li>
+    <p>
+      <strong>Projects & Innovation</strong> -
+      Build practical technology solutions while developing programming,
+      problem-solving, collaboration, and technical communication skills.
+    </p>
+  </div>
 
-              <li>
-                <strong style="color: #07203F;">
-                  SmartCabin – TamuHack
-                </strong>
-                - Built a React-based passenger service platform that enables
-                real-time requests for meals, beverages, accessibility
-                assistance, accessories, and cabin services.
-              </li>
-
-              <li>
-                <strong style="color: #07203F;">
-                  Web Development &amp; Accessibility
-                </strong>
-                - Maintain and update professional websites while focusing
-                on accurate content management and accessibility compliance.
-              </li>
-
-              <li>
-                <strong style="color: #07203F;">
-                  Full-Stack Technical Skills
-                </strong>
-                - Experienced with Java, Python, C++, SQL, React, Node.js,
-                TypeScript, HTML/CSS, and Git/GitHub.
-              </li>
-
-              <li>
-                <strong style="color: #07203F;">
-                  Software Engineering
-                </strong>
-                - Collaborate through Git and GitHub, participate in code
-                reviews, and apply software development lifecycle practices
-                to team-based projects.
-              </li>
-
-            </ul>
-
-          </font>
-
-        </div>
-
-      </td>
-
-      <td width="55%" valign="top" align="left">
-
-        <div style="
-          background-color: #FFFFFF;
-          border-left: 5px solid #800000;
-          padding: 15px;
-          margin-bottom: 20px;
-        ">
-
-          <font color="#07203F">
-
-            Hi! I am Aparna Subramaniam. I am a junior at Texas A&amp;M
-            University majoring in Computer Science, minoring in Cybersecurity.
-            My ambition is to work in the field of Computer Science &amp;
-            Information Technology, and am seeking valuable opportunities to
-            discover more and develop experience as an individual who is eager
-            to enter the world of modern technology.
-
-          </font>
-
-        </div>
-
-
-        <div class="info-box"
-             style="
-               background-color: #D9AA90;
-               border-color: #800000;
-               width: 100%;
-             ">
-
-          <font color="#07203F">
-
-            <strong style="color: #02000D;">
-              Previous Roles &amp; Experience
-            </strong>
-
-            <ul>
-
-              <li>
-                AI &amp; Software Intern @ True Rise Foundation
-              </li>
-
-              <li>
-                Student Worker - Applied Cybersecurity @
-                Texas A&amp;M Engineering Extension Services (TEEX)
-              </li>
-
-              <li>
-                Student Technician @ Energy Systems Lab (TEES)
-              </li>
-
-            </ul>
-
-          </font>
-
-        </div>
-
-        <br>
-
-        <div class="resume-preview"
-             style="
-               background-color: #EBDED4;
-               border: 2px solid #07203F;
-               border-radius: 4px;
-             ">
-
-          <font color="#07203F">
-
-            <strong style="color: #800000;">
-              My Resume
-            </strong>
-
-          </font>
-
-          <br><br>
-
-          <a href="resume.png" target="_blank">
-
-            <img src="resume.png"
-                 alt="Aparna Subramaniam Resume"
-                 width="500">
-
-          </a>
-
-          <br><br>
-
-          <font color="#07203F">
-
-            <small>
-              Click the resume to view it larger.
-            </small>
-
-          </font>
-
-        </div>
-
-      </td>
-
-    </tr>
-
-  </table>
-
-
-  <!-- Navigation -->
   <nav class="site-nav">
-
     <a href="index.html">Home</a>
-
     <a href="portfolio.html">Portfolio</a>
-
     <a href="qualifications.html">Qualifications</a>
-
     <a href="activities.html">Activities</a>
-
     <a href="sandbox.html">Sandbox</a>
-
   </nav>
-
 
 </div>
 
 </body>
-
 </html>
