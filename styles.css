@@ -23,24 +23,39 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
 
-h1, h2, h3, p {
+/* Headings */
+
+h1,
+h2,
+h3,
+p {
   margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; padding-top: 3rem; }
-h2 { font-size: 2rem; padding-top: 3rem; }
-p  { font-size: 1rem; }
+h1 {
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+
+/* Buttons */
 
 .button {
   display: inline-block;
@@ -56,22 +71,331 @@ p  { font-size: 1rem; }
 .button:hover {
   background-color: var(--color-rust);
 }
+
+
+/* Top Qualifications Section */
+
+.qualifications-top {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+
+/* Resume */
+
+.resume-section {
+  flex: 0 0 40%;
+}
+
+.resume-section h2 {
+  margin-bottom: 1rem;
+}
+
+.resume-preview {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.resume-preview img {
+  max-width: 100%;
+  width: 430px;
+  height: auto;
+  border: 2px solid var(--color-navy);
+  display: block;
+  margin: 0 auto;
+}
+
+.resume-preview a {
+  text-decoration: none;
+}
+
+
+/* Skills */
+
+.skills-section {
+  flex: 1;
+}
+
+.skills-section h2 {
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.skill-box {
+  background-color: #ffffff;
+  border: 2px solid var(--color-navy);
+  padding: 0.9rem;
+  min-height: 135px;
+}
+
+.skill-box h3 {
+  color: var(--color-rust);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-box ul {
+  padding-left: 1.2rem;
+}
+
+.skill-box li {
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+}
+
+
+/* Certifications and Awards */
+
+.bottom-sections {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.certifications-section,
+.awards-section {
+  flex: 1;
+}
+
+.certifications-section h2,
+.awards-section h2 {
+  text-align: center;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+
+
+/* Certifications */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.certification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  width: 135px;
+  height: 135px;
+
+  background-color: var(--color-rust);
+  color: #ffffff;
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 95%,
+    50% 73%,
+    21% 95%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  padding: 25px;
+}
+
+.star span {
+  max-width: 75px;
+}
+
+
+/* Awards */
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.award {
+  text-align: center;
+}
+
+
+/* Medal Container */
+
+.medal {
+  position: relative;
+  width: 110px;
+  height: 155px;
+  margin: 0 auto 0.5rem;
+}
+
+
+/* Medal Ribbon */
+
+.ribbon {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 62px;
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.ribbon-left,
+.ribbon-center,
+.ribbon-right {
+  height: 70px;
+}
+
+
+/* Left maroon section */
+
+.ribbon-left {
+  width: 19px;
+
+  background-color: var(--color-rust);
+
+  transform: skewY(-25deg);
+
+  margin-right: -3px;
+}
+
+
+/* White center */
+
+.ribbon-center {
+  width: 20px;
+
+  background-color: #ffffff;
+
+  border-left: 2px solid var(--color-navy);
+  border-right: 2px solid var(--color-navy);
+}
+
+
+/* Right maroon section */
+
+.ribbon-right {
+  width: 19px;
+
+  background-color: var(--color-rust);
+
+  transform: skewY(25deg);
+
+  margin-left: -3px;
+}
+
+
+/* Gold Medal */
+
+.medal-circle {
+  position: absolute;
+
+  top: 55px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #F4D35E 0%,
+    #D9AA90 65%,
+    #B8860B 100%
+  );
+
+  border: 5px solid var(--color-tan);
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 3px #B8860B;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medal-circle span {
+  color: #B8860B;
+
+  font-size: 2rem;
+
+  text-shadow: 1px 1px 1px #ffffff;
+}
+
+
+/* Award Title */
+
+.award p {
+  color: var(--color-navy);
+
+  font-weight: 700;
+
+  font-size: 0.9rem;
+
+  margin-top: 0.5rem;
+}
+
+
+/* Navigation */
+
 .site-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.75rem;
+
   padding: 1.5rem 1rem;
 }
 
 .site-nav a {
   display: inline-block;
+
   padding: 0.5rem 1.25rem;
+
   background-color: var(--color-navy);
+
   color: #ffffff;
+
   border-radius: 4px;
+
   text-decoration: none;
+
   font-weight: 600;
+
   transition: background-color 0.15s ease;
 }
 
@@ -79,45 +403,76 @@ p  { font-size: 1rem; }
   background-color: var(--color-rust);
 }
 
-/* Outlined boxes used for Previous Roles, Portfolio Highlights, etc. */
-.info-box {
-  border: 2px solid var(--color-navy);
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  padding: 15px 12px 15px 15px;
-}
 
-.info-box ul {
-  padding-left: 22px;
-  margin: 0;
-}
+/* Responsive Design */
 
-.info-box li {
-  margin-bottom: 4px;
-}
+@media (max-width: 850px) {
 
-@media (min-width: 550px) {
-  .container {
-    padding: 0 2rem;
+  .qualifications-top {
+    flex-direction: column;
   }
+
+  .resume-section,
+  .skills-section {
+    width: 100%;
+  }
+
+  .resume-section {
+    flex: none;
+  }
+
+  .bottom-sections {
+    flex-direction: column;
+  }
+
 }
 
-.resume-preview {
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
+
+@media (max-width: 650px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certifications-grid,
+  .awards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .star {
+    width: 110px;
+    height: 110px;
+    font-size: 0.75rem;
+  }
+
+  .medal {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin-bottom: -15px;
+  }
+
 }
 
-.resume-preview img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #07203F;
-}
 
-.resume-preview a {
-    text-decoration: none;
-}
-.info-box li {
-    margin-bottom: 8px;
+@media (max-width: 500px) {
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-grid,
+  .awards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
 }

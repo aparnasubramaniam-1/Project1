@@ -1,20 +1,528 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
+
 <head>
-    <link rel="stylesheet" href="styles.css">
-<title>TEST</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Qualifications - Aparna Subramaniam</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .qualifications-top {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .resume-section {
+      flex: 0 0 40%;
+    }
+
+    .skills-section {
+      flex: 1;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+
+    .bottom-sections {
+      display: flex;
+      gap: 4rem;
+      margin-top: 4rem;
+      padding-bottom: 3rem;
+      width: 100%;
+    }
+
+    .certifications-section,
+    .awards-section {
+      flex: 1;
+    }
+
+    .certifications-section h2,
+    .awards-section h2 {
+      text-align: center;
+      padding-top: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .certifications-grid,
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: start;
+      justify-items: center;
+    }
+
+    .certification {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .star {
+      width: 180px;
+      height: 180px;
+      background-color: #800000;
+      color: #ffffff;
+
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 95%,
+        50% 73%,
+        21% 95%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 35px;
+    }
+
+    .star span {
+      max-width: 105px;
+    }
+
+    .award {
+      text-align: center;
+    }
+
+    .medal {
+      position: relative;
+      width: 145px;
+      height: 190px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85px;
+      height: 95px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ribbon-left,
+    .ribbon-center,
+    .ribbon-right {
+      height: 90px;
+    }
+
+    .ribbon-left {
+      width: 27px;
+      background-color: #800000;
+      transform: skewY(-25deg);
+      margin-right: -4px;
+    }
+
+    .ribbon-center {
+      width: 28px;
+      background-color: #ffffff;
+      border-left: 3px solid #07203F;
+      border-right: 3px solid #07203F;
+    }
+
+    .ribbon-right {
+      width: 27px;
+      background-color: #800000;
+      transform: skewY(25deg);
+      margin-left: -4px;
+    }
+
+    .medal-circle {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 110px;
+      height: 110px;
+
+      border-radius: 50%;
+
+      background: radial-gradient(
+        circle,
+        #F4D35E 0%,
+        #D9AA90 65%,
+        #B8860B 100%
+      );
+
+      border: 6px solid #D9AA90;
+
+      box-shadow:
+        0 3px 7px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 4px #B8860B;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .award p {
+      color: #07203F;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .qualifications-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding: 2rem 0 2.5rem;
+      clear: both;
+    }
+
+    .qualifications-nav a {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background-color: #07203F;
+      color: #ffffff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.15s ease;
+    }
+
+    .qualifications-nav a:hover {
+      background-color: #800000;
+    }
+
+    @media (max-width: 950px) {
+      .qualifications-top {
+        flex-direction: column;
+      }
+
+      .resume-section,
+      .skills-section {
+        width: 100%;
+      }
+
+      .bottom-sections {
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .certifications-grid,
+      .awards-grid {
+        gap: 1rem;
+      }
+
+      .star {
+        width: 155px;
+        height: 155px;
+      }
+
+      .medal {
+        transform: scale(0.9);
+        transform-origin: top center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .certifications-grid,
+      .awards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qualifications-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-        <td align="center"><h2><font color="#07203F">Qualifications</font></h2>
-      </tr>
-      <tr>
-    <td align="center"><font color="#07203F"><br><br>This page is currently under construction.</font></td>
-  </tr>
-</table>
+
+<div class="container">
+
+  <h1>Qualifications</h1>
+
+  <div class="qualifications-top">
+
+    <div class="resume-section">
+
+      <h2>Resume</h2>
+
+      <div class="resume-preview">
+
+        <a href="resume.png" target="_blank">
+          <img src="resume.png" alt="Aparna Subramaniam Resume">
+        </a>
+
+        <br><br>
+
+        <a class="button" href="resume.png" target="_blank">
+          View Full Resume
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="skills-section">
+
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-box">
+          <h3>Programming</h3>
+          <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C++</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Web Development</h3>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>React</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Data</h3>
+          <ul>
+            <li>SQL</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Software Engineering</h3>
+          <ul>
+            <li>SDLC</li>
+            <li>OOP</li>
+            <li>Testing</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Data Structures</h3>
+          <ul>
+            <li>Algorithms</li>
+            <li>Data Structures</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>AI Development</h3>
+          <ul>
+            <li>Prompt Engineering</li>
+            <li>AI-Assisted Development</li>
+            <li>Prompt Evaluation</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Cybersecurity</h3>
+          <ul>
+            <li>Secure Coding</li>
+            <li>Security Concepts</li>
+            <li>Risk Awareness</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Version Control</h3>
+          <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>GitHub Actions</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Technical Tools</h3>
+          <ul>
+            <li>VS Code</li>
+            <li>RStudio</li>
+            <li>Slack</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>Haskell</li>
+            <li>Bash / Shell</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Development</h3>
+          <ul>
+            <li>Debugging</li>
+            <li>System Design</li>
+            <li>Code Reviews</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Operating Systems</h3>
+          <ul>
+            <li>Linux</li>
+            <li>Windows</li>
+            <li>macOS</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bottom-sections">
+
+    <section class="certifications-section">
+
+      <h2>Courses</h2>
+
+      <div class="certifications-grid">
+
+        <div class="certification">
+          <div class="star">
+            <span>LinkedIn Learning AI Fundamentals</span>
+          </div>
+        </div>
+
+        <div class="certification">
+          <div class="star">
+            <span>LinkedIn Learning Cyber Basics</span>
+          </div>
+        </div>
+
+        <div class="certification">
+          <div class="star">
+            <span>LinkedIn Learning Python</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="awards-section">
+
+      <h2>Achievements</h2>
+
+      <div class="awards-grid">
+
+        <div class="award">
+
+          <div class="medal">
+
+            <div class="ribbon">
+              <div class="ribbon-left"></div>
+              <div class="ribbon-center"></div>
+              <div class="ribbon-right"></div>
+            </div>
+
+            <div class="medal-circle"></div>
+
+          </div>
+
+          <p>TAMU Sahithya -<br>Competition Chair</p>
+
+        </div>
+
+        <div class="award">
+
+          <div class="medal">
+
+            <div class="ribbon">
+              <div class="ribbon-left"></div>
+              <div class="ribbon-center"></div>
+              <div class="ribbon-right"></div>
+            </div>
+
+            <div class="medal-circle"></div>
+
+          </div>
+
+          <p> Dean's List 2024 </p>
+
+        </div>
+
+        <div class="award">
+
+          <div class="medal">
+
+            <div class="ribbon">
+              <div class="ribbon-left"></div>
+              <div class="ribbon-center"></div>
+              <div class="ribbon-right"></div>
+            </div>
+
+            <div class="medal-circle"></div>
+
+          </div>
+
+          <p> NHS </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <nav class="qualifications-nav">
+
+    <a href="index.html">Home</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="qualifications.html">Qualifications</a>
+
+    <a href="activities.html">Activities</a>
+
+    <a href="sandbox.html">Sandbox</a>
+
+  </nav>
+
+</div>
 
 </body>
+
 </html>
