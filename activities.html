@@ -1,20 +1,385 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
+
 <head>
-<title>TEST</title>
+<title>Activities - Aparna Subramaniam</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-</head>
 <link rel="stylesheet" href="styles.css">
 
+<style>
+
+.activities-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.activities-title {
+  text-align: center;
+  color: #07203F;
+  font-size: 2.5rem;
+  padding-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.activities-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.activities-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.activities-sidebar {
+  flex: 0 0 230px;
+}
+
+.section-title {
+  color: #07203F;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.leadership-section {
+  width: 100%;
+}
+
+.leadership-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border: 2px solid #07203F;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  min-height: 190px;
+}
+
+.club-thumbnail {
+  flex: 0 0 190px;
+  width: 190px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #D9AA90;
+  background-color: #EBDED4;
+}
+
+.leadership-description {
+  flex: 1;
+}
+
+.leadership-description h3 {
+  color: #800000;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.leadership-description h4 {
+  color: #07203F;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-description p {
+  color: #07203F;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.sidebar-section {
+  background-color: #ffffff;
+  border: 2px solid #07203F;
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hobbies-section {
+  border-radius: 50% / 18%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-section h2 {
+  color: #800000;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hobbies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-list li {
+  color: #07203F;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.career-section {
+  min-height: 250px;
+}
+
+.career-section p {
+  color: #07203F;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.passion-section {
+  background-color: #ffffff;
+  border: 2px solid #07203F;
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.passion-section h2 {
+  color: #800000;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.passion-section ul {
+  padding-left: 1.5rem;
+  color: #07203F;
+}
+
+.passion-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.activities-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding: 2rem 0 2.5rem;
+  clear: both;
+}
+
+.activities-nav a {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background-color: #07203F;
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+
+.activities-nav a:hover {
+  background-color: #800000;
+}
+
+@media (max-width: 850px) {
+
+  .activities-layout {
+    flex-direction: column;
+  }
+
+  .activities-main,
+  .activities-sidebar {
+    width: 100%;
+  }
+
+  .activities-sidebar {
+    flex: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .sidebar-section {
+    flex: 1;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .leadership-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .club-thumbnail {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+  }
+
+  .activities-sidebar {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .activities-nav {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+</head>
+
 <body>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="center"><h2><font color="#07203F">Activities</font></h2>
-  </tr>
-  <tr>
-    <td align="center"><font color="#07203F"><br><br>This page is currently under construction.</font></td>
-  </tr>
-</table>
+
+<div class="activities-page">
+
+  <h1 class="activities-title">Activities</h1>
+
+  <div class="activities-layout">
+
+    <main class="activities-main">
+
+      <section class="leadership-section">
+
+        <h2 class="section-title">Leadership</h2>
+
+        <div class="leadership-item">
+
+          <img
+            src="club1.png"
+            alt="TAMU Sahithya"
+            class="club-thumbnail"
+          >
+
+          <div class="leadership-description">
+
+            <h3>Competition Chair</h3>
+
+            <h4>TAMU Sahithya</h4>
+
+            <p>
+              Help coordinate competitions and manage important deadlines,
+              applications, and event preparation. Work with team members
+              to organize competition activities, communicate opportunities,
+              and support the team throughout the competitive season.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="leadership-item">
+
+          <img
+            src="club2.jpeg"
+            alt="True Rise Foundation"
+            class="club-thumbnail"
+          >
+
+          <div class="leadership-description">
+
+            <h3>Junior Intern</h3>
+
+            <h4>True Rise Foundation</h4>
+
+            <p>
+              Support AI and software development projects by using prompt engineering, AI-assisted development, and secure coding practices. Collaborate with team
+              members through Git and GitHub, contribute to application development, and explore ways to use emerging AI technologies to improve software solutions.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="passion-section">
+
+        <h2>Passion Projects</h2>
+
+        <ul>
+
+          <li>
+            SmartCabin - Developing technology that combines software
+            engineering, artificial intelligence, and user-centered design
+            to improve the passenger experience through real-time cabin
+            service requests.
+          </li>
+
+          <li>
+            AI-Assisted Software Development - Exploring prompt engineering,
+            AI-assisted application development, and secure coding practices
+            to understand how emerging AI technologies can improve modern
+            software development.
+          </li>
+
+        </ul>
+
+      </section>
+
+    </main>
+
+    <aside class="activities-sidebar">
+
+      <section class="sidebar-section hobbies-section">
+
+        <h2>Hobbies</h2>
+
+        <ul class="hobbies-list">
+
+          <li>Dance</li>
+          <li>Music</li>
+          <li>Travel & Sightseeing </li>
+          <li>Photography</li>
+
+        </ul>
+
+      </section>
+
+      <section class="sidebar-section career-section">
+
+        <h2>Career Goals</h2>
+
+        <p>
+          My goal is to build a career in computer science and information
+          technology, with a particular interest in artificial intelligence,
+          software development, and cybersecurity. I hope to continue
+          developing technical skills while creating innovative and secure
+          technology that can have a meaningful impact.
+        </p>
+
+      </section>
+
+    </aside>
+
+  </div>
+
+  <nav class="activities-nav">
+
+    <a href="index.html">Home</a>
+
+    <a href="portfolio.html">Portfolio</a>
+
+    <a href="qualifications.html">Qualifications</a>
+
+    <a href="activities.html">Activities</a>
+
+    <a href="sandbox.html">Sandbox</a>
+
+  </nav>
+
+</div>
 
 </body>
 </html>
