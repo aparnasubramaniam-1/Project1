@@ -23,12 +23,16 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
 h1,
 h2,
@@ -40,19 +44,16 @@ p {
 h1 {
   font-size: 2.5rem;
   padding-top: 3rem;
-  text-align: center;
 }
 
 h2 {
   font-size: 2rem;
-  padding-top: 1rem;
-  text-align: center;
+  padding-top: 3rem;
 }
 
-h3 {
+p {
   font-size: 1rem;
 }
-
 
 .button {
   display: inline-block;
@@ -69,22 +70,50 @@ h3 {
   background-color: var(--color-rust);
 }
 
-
-
-.qualifications-top {
+.site-nav {
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-top: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
 }
 
-
-.resume-section {
-  flex: 0 0 40%;
+.site-nav a {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
 }
 
-.resume-section h2 {
-  margin-bottom: 1rem;
+.site-nav a:hover {
+  background-color: var(--color-rust);
+}
+
+.info-box {
+  border: 2px solid var(--color-navy);
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 15px 12px 15px 15px;
+}
+
+.info-box ul {
+  padding-left: 22px;
+  margin: 0;
+}
+
+.info-box li {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 550px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 .resume-preview {
@@ -95,451 +124,10 @@ h3 {
 
 .resume-preview img {
   max-width: 100%;
-  width: 430px;
   height: auto;
-  border: 2px solid var(--color-navy);
-  display: block;
-  margin: 0 auto;
+  border: 1px solid #07203F;
 }
 
 .resume-preview a {
   text-decoration: none;
 }
-
-
-
-.skills-section {
-  flex: 1;
-}
-
-.skills-section h2 {
-  margin-bottom: 1rem;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-}
-
-.skill-box {
-  background-color: #ffffff;
-  border: 2px solid var(--color-navy);
-  padding: 0.9rem;
-  min-height: 135px;
-}
-
-.skill-box h3 {
-  color: var(--color-rust);
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.skill-box ul {
-  padding-left: 1.2rem;
-}
-
-.skill-box li {
-  margin-bottom: 0.2rem;
-  font-size: 0.85rem;
-}
-
-
-.bottom-sections {
-  display: flex;
-  gap: 3rem;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.certifications-section,
-.awards-section {
-  flex: 1;
-}
-
-.certifications-section h2,
-.awards-section h2 {
-  text-align: center;
-  padding-top: 0;
-  margin-bottom: 2rem;
-}
-
-
-
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.certification {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.star {
-  width: 135px;
-  height: 135px;
-
-  background-color: var(--color-rust);
-  color: #ffffff;
-
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 95%,
-    50% 73%,
-    21% 95%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  font-size: 0.85rem;
-  font-weight: 700;
-  line-height: 1.2;
-
-  padding: 25px;
-}
-
-.star span {
-  max-width: 75px;
-}
-
-
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-  justify-items: center;
-}
-
-.award {
-  text-align: center;
-}
-
-
-
-.medal {
-  position: relative;
-  width: 110px;
-  height: 155px;
-  margin: 0 auto 0.5rem;
-}
-
-
-.ribbon {
-  position: absolute;
-
-  top: 0;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 62px;
-  height: 75px;
-
-  display: flex;
-  justify-content: center;
-}
-
-.ribbon-left,
-.ribbon-center,
-.ribbon-right {
-  height: 70px;
-}
-
-
-
-.ribbon-left {
-  width: 19px;
-
-  background-color: var(--color-rust);
-
-  transform: skewY(-25deg);
-
-  margin-right: -3px;
-}
-
-
-
-.ribbon-center {
-  width: 20px;
-
-  background-color: #ffffff;
-
-  border-left: 2px solid var(--color-navy);
-  border-right: 2px solid var(--color-navy);
-}
-
-
-
-.ribbon-right {
-  width: 19px;
-
-  background-color: var(--color-rust);
-
-  transform: skewY(25deg);
-
-  margin-left: -3px;
-}
-
-
-.medal-circle {
-  position: absolute;
-
-  top: 55px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 82px;
-  height: 82px;
-
-  border-radius: 50%;
-
-  background: radial-gradient(
-    circle,
-    #F4D35E 0%,
-    #D9AA90 65%,
-    #B8860B 100%
-  );
-
-  border: 5px solid var(--color-tan);
-
-  box-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.25),
-    inset 0 0 0 3px #B8860B;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.medal-circle span {
-  color: #B8860B;
-
-  font-size: 2rem;
-
-  text-shadow: 1px 1px 1px #ffffff;
-}
-
-
-
-.award p {
-  color: var(--color-navy);
-
-  font-weight: 700;
-
-  font-size: 0.9rem;
-
-  margin-top: 0.5rem;
-}
-
-
-
-.site-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-
-  padding: 1.5rem 1rem;
-}
-
-.site-nav a {
-  display: inline-block;
-
-  padding: 0.5rem 1.25rem;
-
-  background-color: var(--color-navy);
-
-  color: #ffffff;
-
-  border-radius: 4px;
-
-  text-decoration: none;
-
-  font-weight: 600;
-
-  transition: background-color 0.15s ease;
-}
-
-.site-nav a:hover {
-  background-color: var(--color-rust);
-}
-
-
-
-@media (max-width: 850px) {
-
-  .qualifications-top {
-    flex-direction: column;
-  }
-
-  .resume-section,
-  .skills-section {
-    width: 100%;
-  }
-
-  .resume-section {
-    flex: none;
-  }
-
-  .bottom-sections {
-    flex-direction: column;
-  }
-
-}
-
-
-@media (max-width: 650px) {
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .certifications-grid,
-  .awards-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-  }
-
-  .star {
-    width: 110px;
-    height: 110px;
-    font-size: 0.75rem;
-  }
-
-  .medal {
-    transform: scale(0.85);
-    transform-origin: top center;
-    margin-bottom: -15px;
-  }
-
-}
-
-
-@media (max-width: 500px) {
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .certifications-grid,
-  .awards-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-}
-.landing-layout {
-    display: grid;
-    grid-template-columns: 42% 58%;
-    gap: 0;
-    align-items: stretch;
-  }
-  
-  .landing-photo {
-    width: 100%;
-    height: 100%;
-    min-height: 700px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
-  
-  .landing-right {
-    padding-left: 1rem;
-  }
-  
-  .landing-intro {
-    background-color: #ffffff;
-    border-left: 6px solid var(--color-rust);
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .landing-intro p {
-    margin: 0;
-    font-size: 1.05rem;
-  }
-  
-  .previous-roles {
-    background-color: #d9aa90;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .previous-roles h2 {
-    padding: 0;
-    margin-bottom: 0.25rem;
-    font-size: 1.25rem;
-    color: #000000;
-  }
-  
-  .previous-roles ul {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-  
-  .previous-roles li {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .landing-resume {
-    border: 2px solid var(--color-navy);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .landing-resume h2 {
-    padding: 0;
-    margin-bottom: 1rem;
-    color: var(--color-rust);
-    font-size: 1.3rem;
-  }
-  
-  .landing-resume img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-    border: 2px solid var(--color-navy);
-    display: block;
-    margin: 0 auto;
-  }
-  
-  @media (max-width: 800px) {
-    .landing-layout {
-      grid-template-columns: 1fr;
-    }
-  
-    .landing-photo {
-      min-height: 500px;
-    }
-  
-    .landing-right {
-      padding-left: 0;
-    }
-  }
