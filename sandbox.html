@@ -1,19 +1,367 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>TEST</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sandbox | Aparna Subramaniam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.sandbox-header {
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+.sandbox-header h2 {
+  color: var(--color-rust);
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.sandbox-header p {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sandbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.sandbox-card {
+  background-color: #ffffff;
+  border: 2px solid var(--color-navy);
+  padding: 1.5rem;
+}
+
+.sandbox-card h3 {
+  color: var(--color-rust);
+  margin-bottom: 0.75rem;
+}
+
+.sandbox-card p {
+  margin-bottom: 0.75rem;
+}
+
+.explorer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.explorer-button {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.explorer-button:hover {
+  background-color: var(--color-rust);
+}
+
+.explorer-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--color-cream);
+  border-left: 5px solid var(--color-rust);
+  min-height: 80px;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.workflow-step {
+  background-color: var(--color-tan);
+  border: 1px solid var(--color-navy);
+  padding: 1rem;
+  text-align: center;
+}
+
+.workflow-step strong {
+  display: block;
+  color: var(--color-dark);
+  margin-bottom: 0.4rem;
+}
+
+.thought-experiment {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.thought-experiment h3 {
+  color: var(--color-cream);
+}
+
+.scenario {
+  background-color: #ffffff;
+  color: var(--color-navy);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.scenario button {
+  margin-top: 0.75rem;
+  background-color: var(--color-rust);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.scenario button:hover {
+  background-color: var(--color-dark);
+}
+
+.scenario-result {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  display: none;
+}
+
+.reflection {
+  margin-top: 1.25rem;
+  border: 2px solid var(--color-rust);
+  padding: 1.5rem;
+  background-color: var(--color-cream);
+}
+
+.reflection h3 {
+  color: var(--color-rust);
+}
+
+.site-nav {
+  margin-top: 2rem;
+}
+
+@media (max-width: 750px) {
+  .sandbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <h3><font color="#990000">Sandbox</font></h3>
-  </tr>
-  <tr>
-    <td align="center"><font color="#07203F"><br><br>This page is currently under construction.</font></td>
-  </tr>
-</table>
+
+<div class="container">
+
+  <div class="sandbox-header">
+    <h2>Technology Sandbox</h2>
+    <p>
+      A space to explore ideas, problem-solving approaches, and the relationship
+      between emerging technology and responsible software development.
+    </p>
+  </div>
+
+  <div class="sandbox-grid">
+
+    <div class="sandbox-card">
+      <h3>Technology Explorer</h3>
+
+      <p>
+        Select a technology area to explore the type of problem it can help
+        address and the questions I consider when working with it.
+      </p>
+
+      <div class="explorer-buttons">
+        <button class="explorer-button" onclick="showTechnology('AI')">AI</button>
+        <button class="explorer-button" onclick="showTechnology('Software')">Software</button>
+        <button class="explorer-button" onclick="showTechnology('Security')">Security</button>
+        <button class="explorer-button" onclick="showTechnology('Data')">Data</button>
+      </div>
+
+      <div class="explorer-result" id="technology-result">
+        Choose an area above to explore.
+      </div>
+    </div>
+
+    <div class="sandbox-card">
+      <h3>My Problem-Solving Approach</h3>
+
+      <p>
+        When approaching a technical challenge, I focus on understanding the
+        problem first and then developing a solution that can be tested,
+        improved, and communicated clearly.
+      </p>
+
+      <div class="workflow">
+        <div class="workflow-step">
+          <strong>01</strong>
+          Understand
+        </div>
+
+        <div class="workflow-step">
+          <strong>02</strong>
+          Design
+        </div>
+
+        <div class="workflow-step">
+          <strong>03</strong>
+          Build
+        </div>
+
+        <div class="workflow-step">
+          <strong>04</strong>
+          Evaluate
+        </div>
+      </div>
+    </div>
+
+    <div class="sandbox-card">
+      <h3>What Makes Technology Useful?</h3>
+
+      <p>
+        A technical solution should do more than function correctly. It should
+        also consider the people who use it, the environment in which it
+        operates, and the potential risks associated with it.
+      </p>
+
+      <ul>
+        <li>Is the solution understandable to its users?</li>
+        <li>Can it adapt to different situations?</li>
+        <li>Has it been tested effectively?</li>
+        <li>Are security and accessibility considered?</li>
+        <li>Can the solution be improved over time?</li>
+      </ul>
+    </div>
+
+    <div class="sandbox-card">
+      <h3>Future Exploration</h3>
+
+      <p>
+        I am interested in exploring how artificial intelligence can work
+        alongside traditional software engineering and cybersecurity practices.
+        As these technologies continue to develop, I want to better understand
+        how they can be used responsibly to create reliable and secure systems.
+      </p>
+
+      <p>
+        This includes experimenting with new development tools, learning
+        emerging technologies, and understanding how technical decisions affect
+        users and organizations.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="thought-experiment">
+
+    <h3>AI & Security Thought Experiment</h3>
+
+    <p>
+      Imagine an organization uses an AI-powered application to help employees
+      process sensitive information. The system is efficient, but employees
+      begin entering information that should not be shared with an external
+      AI service.
+    </p>
+
+    <div class="scenario">
+      <strong>What should happen first?</strong>
+
+      <button onclick="showScenarioAnswer()">
+        Reveal my approach
+      </button>
+
+      <div class="scenario-result" id="scenario-result">
+        Before improving the system's efficiency, I would identify the type of
+        information being handled, determine the security and privacy risks,
+        establish appropriate data-handling rules, and make sure users understand
+        how the system should be used. Responsible technology requires balancing
+        functionality with security and user awareness.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="reflection">
+
+    <h3>Why I Built This Sandbox</h3>
+
+    <p>
+      This page represents the part of my professional development that happens
+      between completed projects. Technology changes quickly, so continuing to
+      experiment, ask questions, and evaluate different approaches is an
+      important part of becoming a strong computer science professional.
+    </p>
+
+    <p>
+      Rather than presenting another list of accomplishments, this space
+      highlights how I approach learning and technical problem-solving. I hope
+      to continue using this mindset as I develop at the intersection of
+      artificial intelligence, software development, and cybersecurity.
+    </p>
+
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="activities.html">Activities</a>
+    <a href="sandbox.html">Sandbox</a>
+  </nav>
+
+</div>
+
+<script>
+function showTechnology(technology) {
+  var result = document.getElementById("technology-result");
+
+  if (technology === "AI") {
+    result.innerHTML = "<strong>Artificial Intelligence:</strong> I am interested in how AI can support software development, automate repetitive tasks, and help create more adaptive technology while still requiring careful evaluation and responsible use.";
+  }
+
+  if (technology === "Software") {
+    result.innerHTML = "<strong>Software Development:</strong> Software engineering turns ideas into usable systems. I focus on understanding requirements, building organized solutions, testing functionality, and improving the user experience.";
+  }
+
+  if (technology === "Security") {
+    result.innerHTML = "<strong>Cybersecurity:</strong> Security should be considered throughout the development process. Understanding risks, protecting information, and designing systems responsibly are important parts of creating dependable technology.";
+  }
+
+  if (technology === "Data") {
+    result.innerHTML = "<strong>Data:</strong> Data can help developers understand patterns, evaluate results, and make informed decisions. I am interested in how data can support intelligent and effective technology solutions.";
+  }
+}
+
+function showScenarioAnswer() {
+  var result = document.getElementById("scenario-result");
+
+  if (result.style.display === "block") {
+    result.style.display = "none";
+  } else {
+    result.style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>
